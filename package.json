@@ -1,0 +1,43 @@
+{
+  "name": "octet-test-automation",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "prettier:run": "prettier --write '**/*.js'",
+    "cypress:open": "cypress open --env TAGS='not @skip'",
+    "cy:run:qa": "npx cypress run --env TAGS='not @skip' --e2e --headless",
+    "cy:run:qajenkins": "npx cypress run --env TAGS=${CYPRESS_TAGS} --e2e --headless",
+    "cy:run:justOneTag": "npx cypress run --env TAGS='@getFactorial' --headless",
+    "cucumber-report": "node cucumber-html-report.js",
+    "delete-existingJsonReports": "rm -rf ./reports/cucumber-json/*.json",
+    "delete-reportFolder": "rm -rf ./reports",
+    "TestWithReportGeneration": "npm run delete-reportFolder ; npm run cy:run:qa; npm run cucumber-report ; npm run delete-existingJsonReports",
+    "PensaTestWithReportGeneration": "npm run delete-reportFolder ; npm run cy:run:qajenkins; npm run cucumber-report ; npm run delete-existingJsonReports"
+  },
+  "keywords": [],
+  "author": "Fatih Ramazan YILMAZ",
+  "license": "ISC",
+  "description": "Octet Test Automation",
+  "dependencies": {
+    "@types/cypress-cucumber-preprocessor": "^4.0.5",
+    "cucumber-json-report-formatter": "^0.1.4",
+    "cypress": "^13.14.2",
+    "cypress-cucumber-attach-screenshots-to-failed-steps": "^1.0.0",
+    "cypress-cucumber-preprocessor": "^4.3.1",
+    "cypress-cucumber-steps": "^3.61.1",
+    "cypress-wait-until": "^3.0.2",
+    "cypress-xpath": "^2.0.1",
+    "multiple-cucumber-html-reporter": "^3.7.0"
+  },
+  "cypress-cucumber-preprocessor": {
+    "tagExpression": "not @skip",
+    "nonGlobalStepDefinitions": true,
+    "commonPath": "cypress/integration/step-definition/",
+    "cucumberJson": {
+      "generate": true,
+      "outputFolder": "cypress/reports/cucumber-json",
+      "filePrefix": "",
+      "fileSuffix": ".cucumber"
+    }
+  }
+}

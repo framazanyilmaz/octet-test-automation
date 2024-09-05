@@ -1,0 +1,6 @@
+{
+  "mainPageText":"h1[class='margin-base-vertical text-center']",
+  "numberInput": "#number",
+  "calculateButton": "#getFactorial",
+  "result":"#resultDiv"
+}
