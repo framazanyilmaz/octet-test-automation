@@ -7,12 +7,12 @@
     "cypress:open": "cypress open --env TAGS='not @skip'",
     "cy:run:qa": "npx cypress run --env TAGS='not @skip' --e2e --headless",
     "cy:run:qajenkins": "npx cypress run --env TAGS=${CYPRESS_TAGS} --e2e --headless",
-    "cy:run:justOneTag": "npx cypress run --env TAGS='@getFactorial' --headless",
+    "cy:run:justOneTag": "npx cypress run --env TAGS='@octet' --headless",
     "cucumber-report": "node cucumber-html-report.js",
     "delete-existingJsonReports": "rm -rf ./reports/cucumber-json/*.json",
     "delete-reportFolder": "rm -rf ./reports",
     "TestWithReportGeneration": "npm run delete-reportFolder ; npm run cy:run:qa; npm run cucumber-report ; npm run delete-existingJsonReports",
-    "PensaTestWithReportGeneration": "npm run delete-reportFolder ; npm run cy:run:qajenkins; npm run cucumber-report ; npm run delete-existingJsonReports"
+    "OctetTestWithReportGeneration": "npm run delete-reportFolder ; npm run cy:run:qajenkins; npm run cucumber-report ; npm run delete-existingJsonReports"
   },
   "keywords": [],
   "author": "Fatih Ramazan YILMAZ",

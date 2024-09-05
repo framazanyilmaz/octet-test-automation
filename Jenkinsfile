@@ -6,7 +6,7 @@ pipeline {
 
  parameters {
         
-         choice(name: 'CYPRESS_TAGS', choices: ['@regression',], description: "Choice the tag that you want to execute your scripts")
+         choice(name: 'CYPRESS_TAGS', choices: ['@octet',], description: "Choice the tag that you want to execute your scripts")
     }
 
 
@@ -26,7 +26,7 @@ pipeline {
         
         stage('Testing') {
             steps {
-                sh "npm run PensaTestWithReportGeneration"
+                sh "npm run OctetTestWithReportGeneration"
             }
 
         }
