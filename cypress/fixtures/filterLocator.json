@@ -1,0 +1,4 @@
+{
+    "vPOSFilter":"input[data-testid='formItem-posIds']",
+    "closeFilterPage":".svg-inline--fa.fa-xmark"
+}

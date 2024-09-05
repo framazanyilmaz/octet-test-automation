@@ -1,0 +1,5 @@
+{
+    "transactionDetail":"tbody tr:nth-child(1) td:nth-child(10) div:nth-child(1) button:nth-child(1) span:nth-child(1) svg",
+    "cardNumberReport":"tbody tr:nth-child(11) td:nth-child(2)",
+    "orderNoReport":"tbody tr:nth-child(11) td:nth-child(2)"
+}

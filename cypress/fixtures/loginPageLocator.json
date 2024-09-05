@@ -1,0 +1,4 @@
+{
+  "email":"//input[@data-testid='formItem-email']",
+  "password": "//input[@data-testid='formItem-password']"
+}

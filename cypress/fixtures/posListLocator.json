@@ -1,0 +1,4 @@
+{
+    "transactions":"tbody tr:nth-child(1) td:nth-child(5) div:nth-child(1) button:nth-child(1)",
+    "posListTable":"//tbody/tr"
+}

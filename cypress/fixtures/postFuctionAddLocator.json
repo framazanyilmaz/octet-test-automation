@@ -1,0 +1,12 @@
+{
+    "amount":"(//input[@id='input'])[1]",
+    "bankName":"div[class='portal-wrapper'] li:nth-child(1) p:nth-child(1)",
+    "functionPOS":"div[class='row align-items-center wrap-nowrap gap-8 autocomplete autocomplete-is-full-width'] div[class='row align-items-center wrap-nowrap gap-12 autocomplete-fieldset-container']",
+    "cardNumber":"input[data-testid='formItem-cardNumber']",
+    "cardHolderName":"input[data-testid='formItem-cardHolderName']",
+    "cardExpireDate":"input[data-testid='formItem-cardExpire']",
+    "cardCVV":"input[data-testid='formItem-cardCvv2']",
+    "refNumber":"input[data-testid='formItem-referenceNumber']",
+    "errPageClose":"button[class='icon-button icon-button-is-small']",
+    "posOrderNumber":"input[data-testid='formItem-orderNumber']"
+}

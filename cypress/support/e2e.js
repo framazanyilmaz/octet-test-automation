@@ -16,6 +16,9 @@
 // Import commands.js using ES2015 syntax:
 import "cypress-cucumber-attach-screenshots-to-failed-steps";
 import "./commands";
+import "./banks.commands";
+import "./login.commadns";
+import "./posConnection.commands";
 require("cypress-xpath");
 require("cypress-wait-until");
 

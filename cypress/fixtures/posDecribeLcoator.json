@@ -1,0 +1,17 @@
+{
+    "posName":"//input[@data-testid='formItem-name']",
+    "status":"div[data-testid='formItem-isActive']",
+    "statusofActive":"li[data-value='true']",
+    "posModeType":"div[data-testid='formItem-posModeType']",
+    "posModeTypeofTest":"li[data-value='2']",
+    "apiUserName":"//input[@data-testid='formItem-posConnectionParameters.0.value']",
+    "apiPassword":"//input[@data-testid='formItem-posConnectionParameters.1.value']",
+    "threeDKey":"//input[@data-testid='formItem-posConnectionParameters.2.value']",
+    "posNo":"//input[@data-testid='formItem-posConnectionParameters.3.value']",
+    "mbrld":"//input[@data-testid='formItem-posConnectionParameters.4.value']",
+    "posType":"div[data-testid='formItem-posType']",
+    "cardAccountType":"div[data-testid='formItem-cardAccountType']",
+    "threeDKeySelect":"div[class='select select-is-full-width']",
+    "posPersonal":"//div[@data-testid='formItem-posInstalmentPersonal']//div//span",
+    "posCommercial":"//div[@data-testid='formItem-posInstalmentCommercial']//div//span"
+}

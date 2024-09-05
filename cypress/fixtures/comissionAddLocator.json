@@ -1,0 +1,8 @@
+{
+    "commissionName":"//div[@class='row input input-is-full-width']//input[@id='input']",
+    "startDate":"body > div:nth-child(9) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > form:nth-child(1) > div:nth-child(1) > section:nth-child(2) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > input:nth-child(1)",
+    "dayButton":"//div[@class='dates']//button",
+    "defineDifferentValuesForCommercialCards":"label[data-testid='formItem-defineDifferentValuesForCommercialCards'] span[class='slider']",
+    "singleRates":"//body[1]/div[9]/div[1]/div[1]/div[1]/form[1]/div[1]/section[1]/div[1]/div[5]/div[1]/div[1]/div[2]/div[1]/table[1]/tbody[1]/tr",
+    "foreignCards":"//body[1]/div[9]/div[1]/div[1]/div[1]/form[1]/div[1]/section[1]/div[1]/div[7]/div[1]/div[1]/div[3]/div[1]/table[1]/tbody[1]/tr"
+}
