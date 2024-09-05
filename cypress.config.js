@@ -39,7 +39,7 @@ module.exports = defineConfig({
     specPattern: "cypress/e2e/features/**/*.feature",
     excludeSpecPattern:
       "**/cypress/pages/*,cypress/integration/step-definition/*",
-    testIsolation: "strict",
+    testIsolation: true,
     experimentalWebKitSupport: true,
     failOnStatusCode: false,
     defaultCommandTimeout: 50000,
