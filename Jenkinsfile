@@ -2,11 +2,11 @@ pipeline {
 
     agent any
     
-    tools {node "nodev18.15.0"} 
+     tools {nodejs "node"} 
 
  parameters {
         
-         choice(name: 'CYPRESS_TAGS', choices: ['@octet',], description: "Choice the tag that you want to execute your scripts")
+         choice(name: 'CYPRESS_TAGS', choices: ['@octet','@smoke',], description: "Choice the tag that you want to execute your scripts")
     }
 
 
