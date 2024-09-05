@@ -19,13 +19,13 @@ report.generate({
 
     displayReportTime: true,
     displayDuration: true,
-    pageTitle: "Pensa Web Automation"
+    pageTitle: "Octet Web Automation"
   },
 
   customData: {
     title: 'Run info',
     data: [
-      { label: 'Project', value: 'Pensa' },
+      { label: 'Project', value: 'Octet' },
       { label: 'Release', value: 'V1.0' },
       { label: 'Execution Start Time', value: Report_Time + ':' + date.getMinutes() +  ":" + date.getSeconds() },
       { label: 'Execution End Time', value: Report_Time + ':' + date.getMinutes() +  ":" + date.getSeconds() }
