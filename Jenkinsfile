@@ -2,7 +2,7 @@ pipeline {
 
     agent any
     
-    tools {nodejs "nodev18.15.0"} 
+    tools {node "nodev18.15.0"} 
 
  parameters {
         
