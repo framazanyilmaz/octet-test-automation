@@ -26,7 +26,7 @@ pipeline {
         
         stage('Testing') {
             steps {
-                sh "npm run OctetTestWithReportGeneration"
+                sh "npm run TestWithReportGeneration"
             }
 
         }
