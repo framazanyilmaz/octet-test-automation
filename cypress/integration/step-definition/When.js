@@ -264,6 +264,7 @@ When(
 When(
   "Click button for tomorrow date {string},{string}",
   (startDateLocator, dayButtonLocator) => {
+    cy.wait(3000);
     cy.findKeyInFixtures(startDateLocator).then(value => {
       cy.clickLocator(value);
     });

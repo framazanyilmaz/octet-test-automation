@@ -35,7 +35,8 @@ before(() => {
 });
 
 beforeEach(() => {
-  cy.viewport(1080, 1018);
+ // cy.viewport(1080, 1018);
+ cy.viewport(1280, 1018)
 });
 
 
