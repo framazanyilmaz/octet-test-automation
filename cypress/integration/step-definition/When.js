@@ -1,4 +1,5 @@
 import { When } from "cypress-cucumber-preprocessor/steps";
+import { postConnectionData } from "../../support/posConnection.commands";
 
 var locatorCount,
   locatorSingleRatesCount,
@@ -6,8 +7,11 @@ var locatorCount,
   locatorPersonalCount,
   locatorCommercialCount,
   startRatesForpersonal,
-  startRatesForCommercial,posNameLocatorCount,posNameFromTable,transacationIndex;
-export var userToken,orderNumberFromPosFunction;
+  startRatesForCommercial,
+  posNameLocatorCount,
+  posNameFromTable,
+  transacationIndex;
+export var userToken, orderNumberFromPosFunction;
 When("Fill on the for email {string}", locator => {
   cy.findKeyInFixtures(locator).then(value => {
     cy.inputTextWithXpath(value, Cypress.env("userTestAutomationEmail"));
@@ -178,7 +182,10 @@ When("Fill installment rates for commercial", () => {
   }
 });
 
-When('Get {string} transaction button using index {string}',(posName,locator)=>{
+When(
+  "Get {string} transaction button using index {string}",
+  (posName, locator) => {
+    /*
   cy.findKeyInFixtures(locator).then(value => {
     cy.xpath(value).then($value => {
       posNameLocatorCount = $value.length;
@@ -196,21 +203,73 @@ When('Get {string} transaction button using index {string}',(posName,locator)=>{
     })
     cy.log('transacationIndex:, ',transacationIndex)
     return cy.wrap(transacationIndex);
+  }*/
+    cy.wait(1000);
+    cy.findKeyInFixtures(locator).then(value => {
+      cy.xpath(value).then($value => {
+        posNameLocatorCount = $value.length;
+
+        cy.wrap(null)
+          .then(() => {
+            for (let index = 1; index <= posNameLocatorCount; index++) {
+              cy.xpath(`//tbody/tr[${index}]/td[1]`).then($el => {
+                posNameFromTable = $el.text().trim();
+
+                cy.log("posNameFromTable: ", posNameFromTable);
+
+                if (posNameFromTable.includes(posName)) {
+                  cy.log("index: ", index);
+                  transacationIndex = index;
+                  return false;
+                }
+              });
+            }
+          })
+          .then(() => {
+            cy.log("Final transacationIndex: ", transacationIndex);
+            return cy.wrap(transacationIndex);
+          });
+      });
+    });
   }
-})
-When('Click transaction button with index',()=>{
-  cy.xpath(`//tbody/tr[${transacationIndex}]/td[5]`).click()
-})
-When('Type text with on the {string},{string}',(locator,text)=>{
+);
+When("Click transaction button with index", () => {
+  cy.wait(1000);
+  cy.xpath(`//tbody/tr[${transacationIndex}]/td[5]`).click();
+});
+When("Type text with on the {string},{string}", (locator, text) => {
   cy.findKeyInFixtures(locator).then(value => {
     cy.inputText(value, text);
   });
-})
-When('Get order number {string}',(locator)=>{
+});
+When("Get order number {string}", locator => {
   cy.findKeyInFixtures(locator).then(value => {
-    cy.get(value).invoke('text').then((text)=>{
-      orderNumberFromPosFunction = text;
-    });
+    cy.get(value)
+      .invoke("text")
+      .then(text => {
+        orderNumberFromPosFunction = text;
+      });
   });
-})
-   
+});
+When(
+  "Check pos connection info {string},{string}",
+  (bankNameSearchLocator, bankTransactionLocator) => {
+    if (postConnectionData.length > 0) {
+      cy.log("Seçilecek Bankanın Pos Bilgileri Setlenmiş Durumdadır...");
+    } else {
+      cy.describeBank(bankNameSearchLocator, bankTransactionLocator);
+    }
+  }
+);
+When(
+  "Click button for tomorrow date {string},{string}",
+  (startDateLocator, dayButtonLocator) => {
+    cy.findKeyInFixtures(startDateLocator).then(value => {
+      cy.clickLocator(value);
+    });
+
+    cy.findKeyInFixtures(dayButtonLocator).then(value => {
+      cy.get(value).next("button").click();
+    });
+  }
+);
