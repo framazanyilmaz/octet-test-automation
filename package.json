@@ -27,7 +27,6 @@
     "cypress-cucumber-steps": "^3.61.1",
     "cypress-wait-until": "^3.0.2",
     "cypress-xpath": "^2.0.1",
-    "multiple-cucumber-html-reporter": "^3.7.0",
     "prettier": "^3.3.3"
   },
   "cypress-cucumber-preprocessor": {
@@ -40,5 +39,8 @@
       "filePrefix": "",
       "fileSuffix": ".cucumber"
     }
+  },
+  "devDependencies": {
+    "multiple-cucumber-html-reporter": "^3.7.0"
   }
 }

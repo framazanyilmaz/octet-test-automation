@@ -1,4 +1,5 @@
 {
+    "paymentSystemPos":"body > div:nth-child(9) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > ul:nth-child(1) > li:nth-child(13) > p:nth-child(1)",
     "posName":"//input[@data-testid='formItem-name']",
     "status":"div[data-testid='formItem-isActive']",
     "statusofActive":"li[data-value='true']",

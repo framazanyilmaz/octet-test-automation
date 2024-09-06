@@ -19,6 +19,7 @@ import "./commands";
 import "./banks.commands";
 import "./login.commadns";
 import "./posConnection.commands";
+import "./bankDescribe.commands";
 require("cypress-xpath");
 require("cypress-wait-until");
 

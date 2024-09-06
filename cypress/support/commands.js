@@ -110,7 +110,7 @@ Cypress.Commands.add("inputTextWithXpath", (locator, input) => {
 });
 
 Cypress.Commands.add("clickLocator", locator => {
-  cy.waitUntil(() => cy.get(locator).should("be.visible").click());
+  cy.waitUntil(() => cy.get(locator).click());
 });
 
 Cypress.Commands.add("xpathWithClick", text => {

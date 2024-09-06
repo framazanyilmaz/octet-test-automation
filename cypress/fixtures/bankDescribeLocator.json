@@ -1,0 +1,4 @@
+{
+    "searchBankName": "input[placeholder='Banka Adı Ara']",
+    "bankTransaction": "button[class='icon-button']"
+}

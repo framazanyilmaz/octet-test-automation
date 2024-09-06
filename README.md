@@ -29,3 +29,6 @@ Pls review package.json file for script
 
 
 npm run TestWithReportGeneration
+
+if you want to execute using Jenkins pls review Jenkins File. You can change or add feature parametre also, if you wanna 
+deploy your test report any cloud you can using. 

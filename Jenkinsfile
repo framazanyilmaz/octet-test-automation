@@ -36,7 +36,7 @@ pipeline {
                 
                 echo('Deploy Test Result Report to s3')
                 sh ''
-
+                    
                  sh """curl -X POST -H 'Content-type: application/json' --data '{"text":"Rapora Ulaşmak İçin: ReportLinki"}' https://hooks.slack.com/services/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"""
                 
             }
