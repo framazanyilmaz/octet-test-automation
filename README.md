@@ -1,6 +1,6 @@
 # Octet-Web-Automation
 
-Test Automation for Pensa using Cypress + Cucumber 
+Test Automation for Octet using Cypress + Cucumber 
 
 
 # Installation
